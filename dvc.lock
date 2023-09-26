@@ -52,17 +52,17 @@ stages:
           img_size: 256
           batch_size: 8
           fine_tune_args:
-            epochs: 8
+            epochs: 5
             base_lr: 0.01
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: b1946f65d536cea45d94860af0b5485e
-      size: 200592
+      md5: 41f1791811ec7ddd91e9bfdd14df2cf6
+      size: 198288
     - path: models/model.pth
       hash: md5
-      md5: eeb2473390ec356693fdfc36cc471adc
-      size: 164270
+      md5: b8bf016919c570074d085ead9e3e4d6d
+      size: 164014
   evaluate:
     cmd: python src/evaluate.py -o results
     deps:
@@ -73,8 +73,8 @@ stages:
       nfiles: 24
     - path: models/model.pkl
       hash: md5
-      md5: b1946f65d536cea45d94860af0b5485e
-      size: 200592
+      md5: 41f1791811ec7ddd91e9bfdd14df2cf6
+      size: 198288
     - path: src/evaluate.py
       hash: md5
       md5: 84d2fd3b371546730396a763a51527a0
@@ -91,10 +91,10 @@ stages:
     deps:
     - path: models/model.pth
       hash: md5
-      md5: eeb2473390ec356693fdfc36cc471adc
-      size: 164270
+      md5: b8bf016919c570074d085ead9e3e4d6d
+      size: 164014
     outs:
     - path: model.tar.gz
       hash: md5
-      md5: 3c8ccd15d82a5274434a389b9bdf6442
-      size: 145346
+      md5: 0a42d05bc91e6ff80c6641ad3c49e463
+      size: 145428
